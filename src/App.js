@@ -1,8 +1,9 @@
+import Blogs from "./components/Blogs";
 
 function App() {
   return (
     <div>
-      Hello
+      <Blogs/>
     </div>
   );
 }
