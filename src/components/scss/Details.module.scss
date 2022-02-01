@@ -1,0 +1,28 @@
+.container{
+    padding: 40px 400px;
+}
+
+.padding{
+    padding-left: 300px;
+}
+
+.title{
+    text-transform: uppercase;
+}
+
+.subtitle{
+    text-align: right;
+}
+
+.username{
+    text-align: right;
+    cursor: pointer;
+    color: rgb(49, 47, 47);
+    &::before{
+        content: 'By: ';
+    }
+}
+
+.content{
+    font-size: large;
+}
