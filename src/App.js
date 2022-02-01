@@ -1,9 +1,10 @@
-import Blogs from "./components/Blogs";
+// import Blogs from "./components/Blogs";
+import Details from "./components/Details";
 
 function App() {
   return (
     <div>
-      <Blogs/>
+      <Details/>
     </div>
   );
 }
