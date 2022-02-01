@@ -3,40 +3,23 @@ import { CardContent, Card as Card_, CardHeader, Typography, CardActions } from 
 import { Button, Avatar } from '@mui/material';
 import axios from 'axios';
 
-let baseUrl = 'https://jsonplaceholder.typicode.com/users'
 
-export default function Card({blog}) {
-  // let name = `${user.firstName} ${user.lastName}`
-  let userId = blog.userId - 1
-  // let userUrl = `${baseUrl}/${userId}`
-  let name = 'Hello'
-  let [user, setUser] = useState([])
-  useEffect(()=>{
-    axios.get(baseUrl)
-    .then(res => {
-      setUser(res.data)
-      console.log(res.data);
-    })
-  }, [])
-  // axios.get(`${userUrl}/${blog.userId}`)
-  // .then(res=>{
-  //   console.log(res.data);
-  // })
-  // let currentUser = user[userId]
-  // let u_name = currentUser.name
+export default function Card({blog, user}) {
   let ref = `#${blog.id}`
+  let subTitle = `Blog ID: ${blog.id} | User ID: ${blog.userId}`
+  // console.log(user);
   return(
       <Card_>
           <CardHeader
           avatar={
-            <Avatar alt={user.name}/>
+            <Avatar alt=''/>
           }
           title={user.name}
-          subheader="September 14, 2016"
+          subheader={user.email}
           />
           <CardContent>
             <Typography variant='h5'>{blog.title}</Typography>
-            <Typography variant='subtitle1'>Sports</Typography>
+            <Typography variant='subtitle1'>{subTitle}</Typography>
             <Typography sx={{marginTop: '10px'}}>{blog.body}</Typography>
           </CardContent>
           <CardActions>
